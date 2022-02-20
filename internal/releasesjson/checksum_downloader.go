@@ -5,13 +5,14 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"gophers.dev/pkgs/ignore"
 	"io"
 	"log"
 	"net/url"
 	"strings"
 
-	"github.com/hashicorp/hc-install/internal/httpclient"
 	"golang.org/x/crypto/openpgp"
+	"gophers.dev/cmds/hc-install/internal/httpclient"
 )
 
 type ChecksumDownloader struct {
@@ -63,7 +64,7 @@ func (cd *ChecksumDownloader) DownloadAndVerifyChecksums() (ChecksumFileMap, err
 		return nil, fmt.Errorf("failed to download signature from %q: %s", sigURL, sigResp.Status)
 	}
 
-	defer sigResp.Body.Close()
+	defer ignore.Close(sigResp.Body)
 
 	shasumsURL := fmt.Sprintf("%s/%s/%s/%s", cd.BaseURL,
 		url.PathEscape(cd.ProductVersion.Name),
@@ -79,7 +80,7 @@ func (cd *ChecksumDownloader) DownloadAndVerifyChecksums() (ChecksumFileMap, err
 		return nil, fmt.Errorf("failed to download checksums from %q: %s", shasumsURL, sumsResp.Status)
 	}
 
-	defer sumsResp.Body.Close()
+	defer ignore.Close(sumsResp.Body)
 
 	var shaSums strings.Builder
 	sumsReader := io.TeeReader(sumsResp.Body, &shaSums)

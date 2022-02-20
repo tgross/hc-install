@@ -5,27 +5,19 @@ import (
 	"fmt"
 	"os/exec"
 	"regexp"
-	"runtime"
 	"strings"
 
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/hc-install/internal/build"
+	"gophers.dev/cmds/hc-install/internal/build"
 )
 
-var (
-	simpleVersionRe = `v?(?P<version>[0-9]+(?:\.[0-9]+)*(?:-[A-Za-z0-9\.]+)?)`
+const terraformName = "terraform"
 
-	terraformVersionOutputRe = regexp.MustCompile(`Terraform ` + simpleVersionRe)
-)
+var terraformVersionOutputRe = regexp.MustCompile(`Terraform ` + simpleVersionRe)
 
 var Terraform = Product{
-	Name: "terraform",
-	BinaryName: func() string {
-		if runtime.GOOS == "windows" {
-			return "terraform.exe"
-		}
-		return "terraform"
-	},
+	Name:       terraformName,
+	BinaryName: binaryName(terraformName),
 	GetVersion: func(ctx context.Context, path string) (*version.Version, error) {
 		cmd := exec.CommandContext(ctx, path, "version")
 

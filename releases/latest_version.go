@@ -11,11 +11,11 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/hc-install/internal/pubkey"
-	rjson "github.com/hashicorp/hc-install/internal/releasesjson"
-	isrc "github.com/hashicorp/hc-install/internal/src"
-	"github.com/hashicorp/hc-install/internal/validators"
-	"github.com/hashicorp/hc-install/product"
+	"gophers.dev/cmds/hc-install/internal/pubkey"
+	rjson "gophers.dev/cmds/hc-install/internal/releasesjson"
+	isrc "gophers.dev/cmds/hc-install/internal/src"
+	"gophers.dev/cmds/hc-install/internal/validators"
+	"gophers.dev/cmds/hc-install/product"
 )
 
 type LatestVersion struct {

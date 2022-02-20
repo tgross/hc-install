@@ -1,6 +1,6 @@
 package build
 
-// import "github.com/hashicorp/hc-install/product"
+// import gophers.dev/cmds/hc-install/product"
 
 // var (
 // 	_ product.Checker = &GoIsInstalled{}

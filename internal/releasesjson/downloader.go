@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/hashicorp/hc-install/internal/httpclient"
+	"gophers.dev/cmds/hc-install/internal/httpclient"
 )
 
 type Downloader struct {

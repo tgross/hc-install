@@ -7,8 +7,8 @@ import (
 	"log"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/hc-install/errors"
-	"github.com/hashicorp/hc-install/src"
+	"gophers.dev/cmds/hc-install/errors"
+	"gophers.dev/cmds/hc-install/src"
 )
 
 type Installer struct {

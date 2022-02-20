@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hashicorp/hc-install/product"
+	"gophers.dev/cmds/hc-install/product"
 )
 
 func TestLatestVersionValidate(t *testing.T) {
