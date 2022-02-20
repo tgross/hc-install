@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/hc-install/internal/testutil"
+	"gophers.dev/cmds/hc-install/internal/testutil"
 )
 
 func TestListProductVersions_excludesEnterpriseBuilds(t *testing.T) {

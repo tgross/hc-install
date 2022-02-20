@@ -6,9 +6,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/hc-install/internal/testutil"
-	"github.com/hashicorp/hc-install/product"
-	"github.com/hashicorp/hc-install/src"
+	"gophers.dev/cmds/hc-install/internal/testutil"
+	"gophers.dev/cmds/hc-install/product"
+	"gophers.dev/cmds/hc-install/src"
 )
 
 func TestVersions_List(t *testing.T) {

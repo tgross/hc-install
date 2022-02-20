@@ -2,10 +2,22 @@ package product
 
 import (
 	"context"
+	"runtime"
 	"time"
 
 	"github.com/hashicorp/go-version"
 )
+
+const simpleVersionRe = `v?(?P<version>[0-9]+(?:\.[0-9]+)*(?:-[A-Za-z0-9\.]+)?)`
+
+func binaryName(s string) func() string {
+	return func() string {
+		if runtime.GOOS == "windows" {
+			return s + ".exe"
+		}
+		return s
+	}
+}
 
 type Product struct {
 	// Name which identifies the product
