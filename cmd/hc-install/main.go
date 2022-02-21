@@ -58,7 +58,7 @@ func run(ui cli.Ui, args []string) int {
 }
 
 func install(ui cli.Ui, project, tag string) error {
-	msg := fmt.Sprintf("will install %s@%s", project, tag)
+	msg := fmt.Sprintf("hc-install: will install %s@%s", project, tag)
 	ui.Info(msg)
 
 	v := version.Must(version.NewVersion(tag))
@@ -114,7 +114,7 @@ func copyProgram(ui cli.Ui, programPath string) error {
 		destination = filepath.Join(gopath, "bin", program)
 	}
 
-	msg := fmt.Sprintf("copy executable to %s", destination)
+	msg := fmt.Sprintf("hc-install: copy executable to %s", destination)
 	ui.Info(msg)
 
 	return clone(programPath, destination)
