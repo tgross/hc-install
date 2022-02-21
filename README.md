@@ -9,7 +9,7 @@ This repository will become defunct when upstream supports using `hc-install` as
 The `hc-install` command can be installed by running
 
 ```bash
-go install gophers.dev/cmds/hc-install@latest
+go install gophers.dev/cmds/hc-install/cmd/hc-install@latest
 ```
 
 # Usage
