@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/hc-install/errors"
-	"github.com/hashicorp/hc-install/internal/src"
-	"github.com/hashicorp/hc-install/internal/validators"
-	"github.com/hashicorp/hc-install/product"
+	"gophers.dev/cmds/hc-install/errors"
+	"gophers.dev/cmds/hc-install/internal/src"
+	"gophers.dev/cmds/hc-install/internal/validators"
+	"gophers.dev/cmds/hc-install/product"
 )
 
 // Version finds the first executable binary of the product name

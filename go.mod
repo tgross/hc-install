@@ -7,7 +7,6 @@ require (
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/hashicorp/go-version v1.4.0
-	github.com/hashicorp/hc-install v0.3.2
 	github.com/hashicorp/logutils v1.0.0
 	github.com/mitchellh/cli v1.1.2
 	golang.org/x/crypto v0.0.0-20210616213533-5ff15b29337e
@@ -35,5 +34,6 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/posener/complete v1.1.1 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
 	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
 )
